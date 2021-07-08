@@ -24,7 +24,7 @@
 
 		$carro1 = new carro();
 
-		<?
+		?>
 		<h4>Propriedades do Objeto Carro1: </h4>
 		<pre><?php print_r($carro1);  ?></pre>
 
