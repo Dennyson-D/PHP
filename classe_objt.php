@@ -3,7 +3,7 @@
 <small> Classes e objetos </small>
 
 <h3>Propriedades</h3>
-<?php>
+<?php
 
 class carro{
      public $ano;
@@ -14,7 +14,7 @@ class carro{
 
 $carro1 = new carro();
 
-<?>
+?>
 
 <h4>Propriedades do Objeto carro </h4>
 <pre><?php print_r($carro1);  ?></pre>
@@ -30,3 +30,5 @@ $carro1 = new carro();
 <br>
 
 <h4> Novo Dono do Carro1: </h4>
+
+</html>

@@ -13,9 +13,20 @@
 
 
 		<h3>Propriedades</h3>
+		<?php
 
+		class carro{
+			 public $ano;
+			 public $modelo;
+			 public $placa;
+			 public $cpf_dono;
+		}
+
+		$carro1 = new carro();
+
+		<?
 		<h4>Propriedades do Objeto Carro1: </h4>
-		<pre></pre>
+		<pre><?php print_r($carro1);  ?></pre>
 
 		<h3>Métodos</h3>
 
