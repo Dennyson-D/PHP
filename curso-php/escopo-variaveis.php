@@ -20,7 +20,8 @@
 
 				function print_num()
 				{
-					$num = 20;
+					global $num;
+					$num += 5;
 					echo $num;
 				}
 
