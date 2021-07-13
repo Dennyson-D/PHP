@@ -16,16 +16,22 @@
 		<h3>Escopo Global x Escopo Local</h3>
 
 			<?php
-				
+				$num = 10;
+
+				function print_num()
+				{
+					$num = 20;
+					echo $num;
+				}
 
 			?>
 
 			<p>
-			<?php ?>	
+			<?php print_num();?>	
 			</p><br>
 
 			<p>
-			<?php ?>	
+			<?php echo $num; ?>	
 			</p><br>
 
 			
