@@ -16,7 +16,7 @@
 
 		<h3>$_SERVER</h3>
 
-		<p><?php ?></p>
+		<pre><?php var_dump($_SERVER) ?></pre>
 
 
 
@@ -29,7 +29,9 @@
 
 		?>
 
-		<p><?php ?></p>
+		<pre><?php /*var_dump($GLOBALS)*/
+		 echo $GLOBALS['msg'];
+		?></pre>
 
 
 		
