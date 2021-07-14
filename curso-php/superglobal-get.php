@@ -104,11 +104,11 @@
 		<br>
 
 		<h4>Produto: </h4>
-		<p>solte o nome aqui</p>
+		<p><?php echo $itens[$_GET['item']]['nome']; ?></p>
 		<br>
 
 		<h4>Tamanhos disponíveis: </h4>
-		<p>solte os tamanhos aqui</p>
+		<p><?php print_r ($itens[$_GET['item']]['tamanhos']) ; ?></p>
 
 		
 		
