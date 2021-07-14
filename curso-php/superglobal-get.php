@@ -108,7 +108,7 @@
 		<br>
 
 		<h4>Tamanhos disponíveis: </h4>
-		<p><?php print_r ($itens[$_GET['item']]['tamanhos']) ; ?></p>
+		<p><?php var_dump ($itens[$_GET['item']]['tamanhos']) ; ?></p>
 
 		
 		
