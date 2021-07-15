@@ -73,6 +73,12 @@
 		<h4><u>Conheça nossos produtos</u></h4><br>
 		
 		<ul>	
+			<?php foreach ($produtos as $chave => $valor) { ?>
+				<li>
+				   <a href = "<?php echo 'superglobal-get.php?item=' . $chave; ?>"><?php echo $valor['nome']; ?> </a>	
+			    </li>	
+
+			<?php } ?>	
 		</ul>
 
 
@@ -104,11 +110,19 @@
 		<br>
 
 		<h4>Produto: </h4>
-		<p><?php echo $itens[$_GET['item']]['nome']; ?></p>
+		<p><?php echo $itens[$_GET['id']]['nome']; ?></p>
 		<br>
 
 		<h4>Tamanhos disponíveis: </h4>
-		<p><?php var_dump ($itens[$_GET['item']]['tamanhos']) ; ?></p>
+		<?php $tamanhos = $itens[$_GET['id']]['tamanhos']; ?>
+		<p>
+
+			<?php foreach($tamanhos as $t) {
+				  echo $t . ' ';
+			}
+		
+		?>
+		</p>
 
 		
 		
