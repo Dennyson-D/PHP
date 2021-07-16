@@ -24,7 +24,8 @@
 		<p>
 
 			<?php
-				
+				$agora = time();
+				echo date("d/m/y",$agora);
 			?>
 			
 		</p>
@@ -33,8 +34,9 @@
 		<h3>Função mktime</h3>
 
 			<?php
-				
-				
+				#             hora,minuto,segundo,mes,dia,ano
+				$nasc = mktime(0,0,0,2,1,1986);
+				echo date("d/m/Y",$nasc);
 				
 			?>
 
@@ -46,7 +48,8 @@
 		<h3>Função strtotime</h3>
 
 			<?php
-				
+				$dt2 = strtotime("now");
+				echo date('d/m/Y', $dt2);
 			?>
 
 		<p>
@@ -58,7 +61,7 @@
 		<h3>Função date</h3>
 
 			<?php
-				
+				echo date("d/M/Y H:i:s");
 			?>
 
 		<p>
