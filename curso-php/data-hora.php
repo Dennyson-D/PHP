@@ -48,6 +48,7 @@
 		<h3>Função strtotime</h3>
 
 			<?php
+			#date_default_timezone_set('America/Sao_Paulo');
 				$dt2 = strtotime("now");
 				echo date('d/m/Y', $dt2);
 			?>
@@ -72,7 +73,8 @@
 		<h3>Fuso horário</h3>
 
 			<?php
-				
+					date_default_timezone_set('America/Sao_Paulo');
+			echo	date_default_timezone_get();
 			?>			
 
 		<p>
@@ -84,7 +86,19 @@
 		<h3>Cálculos com data e hora</h3>
 
 			<?php
+				$data_entrega = strtotime('26 dec 2021');
+				$data_esperada = strtotime('24 dec 2021');
 				
+				if($data_entrega > $data_esperada)
+				{
+					$atraso = ($data_entrega - $data_esperada ) /60 /60 /24 ;
+					echo 'Atraso de ' . $atraso . ' dias';
+				}
+				else {
+					echo 'No prazo';
+				}
+				echo '<br>';
+				echo date("d/m/Y",$data_entrega);
 			?>
 
 		<p>

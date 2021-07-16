@@ -16,7 +16,7 @@
 
 		<h3>Envie seus dados</h3>
 		
-
+		<pre><?php echo($_SERVER['REQUEST_METHOD']); ?> </pre>
 
 
 		<form action="valida-formularios.php" method="post">
