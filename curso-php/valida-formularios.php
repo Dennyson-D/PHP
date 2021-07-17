@@ -10,11 +10,11 @@
 		<h2>Formulários</h2>
 		<hr>
 		<small>Curso de Básico de PHP - Prof. Ivan Lourenço Gomes</small>
-		
+
 		<h3>Envie seus dados</h3>
 		
 
-
+		<pre><?php echo ($_SERVER['REQUEST_METHOD']); ?> </pre>
 
 		<form action="valida-formularios.php" method="post">
 			
