@@ -12,6 +12,21 @@
 		<small>Curso de Básico de PHP - Prof. Ivan Lourenço Gomes</small>
 
 		<h3>Envie seus dados</h3>
+		<?php 
+		 if($_SERVER['REQUEST_METHOD'] == 'POST')
+		 {
+			$nome = $_POST['nome'];
+			$email = $_POST['email']; 
+
+			if ($nome == "")
+			{
+				$erro_nome = '* O nome é obrigatório';
+			} elseif($email == "")
+			{
+				$erro_email= '* O E-mail é obrigatório';
+			}
+		 }
+		?>
 		
 
 		<pre><?php echo ($_SERVER['REQUEST_METHOD']); ?> </pre>
@@ -21,15 +36,19 @@
 			Nome: *
 			<br>
 			<input type="text" name="nome" class="field">
-			<br><br>
+			<br>
+			<div class="erro-form"> <?php echo $erro_nome; ?></div>
+			<br>
 			
 			E-mail: *
 			<br>
 			<input type="text" name="email" class="field">
-			<br><br>
+			<br>
+			<div class="erro-form"> <?php echo $erro_email; ?> </div>
+			<br>
 
 			<input type="submit" name="submit" class="submit"><br>
-
+			<div class="sucesso-form">Sucesso</div>
 		</form>
 
 		<h3>Confirmaçao</h3>
