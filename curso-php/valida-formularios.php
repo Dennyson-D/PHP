@@ -3,6 +3,13 @@
 		$aula_atual = 'valida-formularios';
 	?>
 
+	<?php
+	 function clean_input($data)
+	 {
+		 $cleandata = trim($data); // tirar espaços em branco
+		 $cleandata = stripslashes($cleandata) //para tirar barras invertidas
+	 }
+	?>
 
 	<body>
 
@@ -12,6 +19,7 @@
 		<small>Curso de Básico de PHP - Prof. Ivan Lourenço Gomes</small>
 
 		<h3>Envie seus dados</h3>
+
 		<?php 
 		 if($_SERVER['REQUEST_METHOD'] == 'POST')
 		 {
@@ -23,7 +31,10 @@
 				$erro_nome = '* O nome é obrigatório';
 			} elseif($email == "")
 			{
-				$erro_email= '* O E-mail é obrigatório';
+				$erro_email = '* O E-mail é obrigatório';
+			} elseif(filter_var($email,FILTER_VALIDATE_EMAIL) == false)
+			{
+				$erro_email = '* E-mail inválido';
 			}
 		 }
 		?>
@@ -50,6 +61,8 @@
 			<input type="submit" name="submit" class="submit"><br>
 			<div class="sucesso-form">Sucesso</div>
 		</form>
+
+
 
 		<h3>Confirmaçao</h3>
 		<pre><?php print_r($_POST); ?></pre>
