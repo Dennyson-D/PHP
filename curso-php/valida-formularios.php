@@ -7,7 +7,8 @@
 	 function clean_input($data)
 	 {
 		 $cleandata = trim($data); // tirar espaços em branco
-		 $cleandata = stripslashes($cleandata) //para tirar barras invertidas
+		 $cleandata = stripslashes($cleandata); //para tirar barras invertidas
+		 $cleandata = htmlspecialchars($cleandata); //para evitar ataques através de tags injection
 	 }
 	?>
 
@@ -35,6 +36,10 @@
 			} elseif(filter_var($email,FILTER_VALIDATE_EMAIL) == false)
 			{
 				$erro_email = '* E-mail inválido';
+			} else
+			{
+				$nome = clean_input($nome);
+				$email = clean_input($email);
 			}
 		 }
 		?>

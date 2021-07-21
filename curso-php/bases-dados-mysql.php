@@ -15,7 +15,7 @@
 
 
 		<h3>MySQLi</h3>
-
+		<!-- <?php phpinfo(); ?> -->
 		
 			
 
